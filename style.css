@@ -1,72 +1,132 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4e4ba;
+    background: linear-gradient(135deg, #fceff9, #e0c3fc);
+    padding: 1rem;
 }
-h1{
-    color: black;
+
+/* Main Title */
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
-.Container{
-    background-color: white;
+
+/* 🌟 GLASSY Converter Box */
+.Container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 2rem;
-    border-radius:1rem ;
-    height:58vh;
-    width: 55vh;
+    border-radius: 2rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 420px;
+    transition: transform 0.3s ease;
 }
-form{
+
+.Container:hover {
+    transform: translateY(-5px);
+}
+
+form {
     margin: 2rem 0 1rem 0;
 }
-form,select,button,input{
-    width:100% ;
+
+form, select, button, input {
+    width: 100%;
     border: none;
     outline: none;
-    border-radius:0.75rem;
+    border-radius: 0.75rem;
 }
-form input{
-    border: 1px solid lightgray;
+
+form input {
+    border: 1px solid #ccc;
     font-size: 1rem;
-    height: 2rem;
-    padding-left: 0.5rem;
+    height: 2.5rem;
+    padding-left: 0.75rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
-.dropdown{
+
+form input:focus {
+    border-color: #af4d98;
+    box-shadow: 0 0 6px rgba(175, 77, 152, 0.4);
+}
+
+.dropdown {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem 0;
+    gap: 1rem;
 }
-.dropdown i{
-    font-size: 2rem;
-    margin-top: 1rem;
-}
-.select-container img{
-    max-width:2rem ;
 
+.dropdown i {
+    font-size: 1.8rem;
+    color: #af4d98;
+    cursor: pointer;
 }
-.select-container{
+
+.select-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7rem;
-    border-radius: 0.5rem;
-    border: 1px solid lightgray;    
+    gap: 0.5rem;
+    width: 8rem;
+    border-radius: 0.75rem;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.6rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
-.select-container select{
+
+.select-container:hover {
+    box-shadow: 0 0 8px rgba(175, 77, 152, 0.2);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.select-container img {
+    max-width: 1.8rem;
+}
+
+.select-container select {
     font-size: 1rem;
-    width: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
-.msg{
-    margin: 2rem 0 2rem 0;
+
+.msg {
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
 }
-form button{
+
+form button {
     height: 3rem;
     background-color: #af4d98;
     color: white;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #943b7f;
+    transform: translateY(-2px);
 }
